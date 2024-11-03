@@ -1,0 +1,32 @@
+[0.340s] Invoking command in '/home/kabilankb/isaacsim_ai/src/isaac_sim_ai': PYTHONPATH=/home/kabilankb/isaacsim_ai/build/isaac_sim_ai/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kabilankb/isaacsim_ai/install/isaac_sim_ai/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/isaac_sim_ai build --build-base /home/kabilankb/isaacsim_ai/build/isaac_sim_ai/build install --record /home/kabilankb/isaacsim_ai/build/isaac_sim_ai/install.log --single-version-externally-managed install_data
+[0.480s] running egg_info
+[0.480s] writing ../../build/isaac_sim_ai/isaac_sim_ai.egg-info/PKG-INFO
+[0.480s] writing dependency_links to ../../build/isaac_sim_ai/isaac_sim_ai.egg-info/dependency_links.txt
+[0.480s] writing entry points to ../../build/isaac_sim_ai/isaac_sim_ai.egg-info/entry_points.txt
+[0.480s] writing requirements to ../../build/isaac_sim_ai/isaac_sim_ai.egg-info/requires.txt
+[0.480s] writing top-level names to ../../build/isaac_sim_ai/isaac_sim_ai.egg-info/top_level.txt
+[0.481s] reading manifest file '../../build/isaac_sim_ai/isaac_sim_ai.egg-info/SOURCES.txt'
+[0.481s] writing manifest file '../../build/isaac_sim_ai/isaac_sim_ai.egg-info/SOURCES.txt'
+[0.481s] running build
+[0.481s] running build_py
+[0.481s] copying isaac_sim_ai/isaacsim_kaya.py -> /home/kabilankb/isaacsim_ai/build/isaac_sim_ai/build/lib/isaac_sim_ai
+[0.482s] running install
+[0.482s] running install_lib
+[0.482s] copying /home/kabilankb/isaacsim_ai/build/isaac_sim_ai/build/lib/isaac_sim_ai/isaacsim_kaya.py -> /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/lib/python3.10/site-packages/isaac_sim_ai
+[0.483s] byte-compiling /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/lib/python3.10/site-packages/isaac_sim_ai/isaacsim_kaya.py to isaacsim_kaya.cpython-310.pyc
+[0.483s] running install_data
+[0.483s] running install_egg_info
+[0.484s] removing '/home/kabilankb/isaacsim_ai/install/isaac_sim_ai/lib/python3.10/site-packages/isaac_sim_ai-0.0.0-py3.10.egg-info' (and everything under it)
+[0.484s] Copying ../../build/isaac_sim_ai/isaac_sim_ai.egg-info to /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/lib/python3.10/site-packages/isaac_sim_ai-0.0.0-py3.10.egg-info
+[0.484s] running install_scripts
+[0.496s] Installing isaacsim_human_following script to /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/lib/isaac_sim_ai
+[0.496s] Installing isaacsim_humanpose script to /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/lib/isaac_sim_ai
+[0.496s] Installing isaacsim_jetbot_balltracking script to /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/lib/isaac_sim_ai
+[0.496s] Installing isaacsim_jetbot_linefollowing script to /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/lib/isaac_sim_ai
+[0.496s] Installing isaacsim_kaya script to /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/lib/isaac_sim_ai
+[0.496s] Installing isaacsim_monodepth script to /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/lib/isaac_sim_ai
+[0.496s] Installing isaacsim_objecct_detection script to /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/lib/isaac_sim_ai
+[0.496s] Installing isaacsim_object_avoidance script to /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/lib/isaac_sim_ai
+[0.496s] Installing segmentation script to /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/lib/isaac_sim_ai
+[0.497s] writing list of installed files to '/home/kabilankb/isaacsim_ai/build/isaac_sim_ai/install.log'
+[0.511s] Invoked command in '/home/kabilankb/isaacsim_ai/src/isaac_sim_ai' returned '0': PYTHONPATH=/home/kabilankb/isaacsim_ai/build/isaac_sim_ai/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kabilankb/isaacsim_ai/install/isaac_sim_ai/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/isaac_sim_ai build --build-base /home/kabilankb/isaacsim_ai/build/isaac_sim_ai/build install --record /home/kabilankb/isaacsim_ai/build/isaac_sim_ai/install.log --single-version-externally-managed install_data

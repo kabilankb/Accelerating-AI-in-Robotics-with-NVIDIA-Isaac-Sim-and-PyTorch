@@ -1,0 +1,6 @@
+source;share/isaac_sim_ai/hook/pythonpath.ps1
+source;share/isaac_sim_ai/hook/pythonpath.dsv
+source;share/isaac_sim_ai/hook/pythonpath.sh
+source;share/isaac_sim_ai/hook/ament_prefix_path.ps1
+source;share/isaac_sim_ai/hook/ament_prefix_path.dsv
+source;share/isaac_sim_ai/hook/ament_prefix_path.sh

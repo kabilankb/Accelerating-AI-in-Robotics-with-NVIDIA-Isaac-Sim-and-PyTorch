@@ -1,0 +1,37 @@
+[0.296s] Invoking command in '/home/kabilankb/isaacsim_ai/src/isaac_sim_ai': PYTHONPATH=/home/kabilankb/isaacsim_ai/build/isaac_sim_ai/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kabilankb/isaacsim_ai/install/isaac_sim_ai/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/isaac_sim_ai build --build-base /home/kabilankb/isaacsim_ai/build/isaac_sim_ai/build install --record /home/kabilankb/isaacsim_ai/build/isaac_sim_ai/install.log --single-version-externally-managed install_data
+[0.410s] running egg_info
+[0.410s] creating ../../build/isaac_sim_ai/isaac_sim_ai.egg-info
+[0.410s] writing ../../build/isaac_sim_ai/isaac_sim_ai.egg-info/PKG-INFO
+[0.410s] writing dependency_links to ../../build/isaac_sim_ai/isaac_sim_ai.egg-info/dependency_links.txt
+[0.410s] writing entry points to ../../build/isaac_sim_ai/isaac_sim_ai.egg-info/entry_points.txt
+[0.410s] writing requirements to ../../build/isaac_sim_ai/isaac_sim_ai.egg-info/requires.txt
+[0.410s] writing top-level names to ../../build/isaac_sim_ai/isaac_sim_ai.egg-info/top_level.txt
+[0.410s] writing manifest file '../../build/isaac_sim_ai/isaac_sim_ai.egg-info/SOURCES.txt'
+[0.411s] reading manifest file '../../build/isaac_sim_ai/isaac_sim_ai.egg-info/SOURCES.txt'
+[0.412s] writing manifest file '../../build/isaac_sim_ai/isaac_sim_ai.egg-info/SOURCES.txt'
+[0.412s] running build
+[0.412s] running build_py
+[0.412s] creating /home/kabilankb/isaacsim_ai/build/isaac_sim_ai/build
+[0.412s] creating /home/kabilankb/isaacsim_ai/build/isaac_sim_ai/build/lib
+[0.412s] creating /home/kabilankb/isaacsim_ai/build/isaac_sim_ai/build/lib/isaac_sim_ai
+[0.412s] copying isaac_sim_ai/__init__.py -> /home/kabilankb/isaacsim_ai/build/isaac_sim_ai/build/lib/isaac_sim_ai
+[0.412s] copying isaac_sim_ai/segmentation.py -> /home/kabilankb/isaacsim_ai/build/isaac_sim_ai/build/lib/isaac_sim_ai
+[0.412s] running install
+[0.412s] running install_lib
+[0.412s] creating /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/lib/python3.10/site-packages/isaac_sim_ai
+[0.412s] copying /home/kabilankb/isaacsim_ai/build/isaac_sim_ai/build/lib/isaac_sim_ai/__init__.py -> /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/lib/python3.10/site-packages/isaac_sim_ai
+[0.412s] copying /home/kabilankb/isaacsim_ai/build/isaac_sim_ai/build/lib/isaac_sim_ai/segmentation.py -> /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/lib/python3.10/site-packages/isaac_sim_ai
+[0.413s] byte-compiling /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/lib/python3.10/site-packages/isaac_sim_ai/__init__.py to __init__.cpython-310.pyc
+[0.413s] byte-compiling /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/lib/python3.10/site-packages/isaac_sim_ai/segmentation.py to segmentation.cpython-310.pyc
+[0.413s] running install_data
+[0.413s] creating /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/share/ament_index
+[0.413s] creating /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/share/ament_index/resource_index
+[0.413s] creating /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/share/ament_index/resource_index/packages
+[0.413s] copying resource/isaac_sim_ai -> /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/share/ament_index/resource_index/packages
+[0.413s] copying package.xml -> /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/share/isaac_sim_ai
+[0.413s] running install_egg_info
+[0.414s] Copying ../../build/isaac_sim_ai/isaac_sim_ai.egg-info to /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/lib/python3.10/site-packages/isaac_sim_ai-0.0.0-py3.10.egg-info
+[0.414s] running install_scripts
+[0.424s] Installing segmentation script to /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/lib/isaac_sim_ai
+[0.424s] writing list of installed files to '/home/kabilankb/isaacsim_ai/build/isaac_sim_ai/install.log'
+[0.438s] Invoked command in '/home/kabilankb/isaacsim_ai/src/isaac_sim_ai' returned '0': PYTHONPATH=/home/kabilankb/isaacsim_ai/build/isaac_sim_ai/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kabilankb/isaacsim_ai/install/isaac_sim_ai/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/isaac_sim_ai build --build-base /home/kabilankb/isaacsim_ai/build/isaac_sim_ai/build install --record /home/kabilankb/isaacsim_ai/build/isaac_sim_ai/install.log --single-version-externally-managed install_data

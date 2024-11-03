@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/isaac_sim_ai/isaac_sim_ai.egg-info
+writing ../../build/isaac_sim_ai/isaac_sim_ai.egg-info/PKG-INFO
+writing dependency_links to ../../build/isaac_sim_ai/isaac_sim_ai.egg-info/dependency_links.txt
+writing entry points to ../../build/isaac_sim_ai/isaac_sim_ai.egg-info/entry_points.txt
+writing requirements to ../../build/isaac_sim_ai/isaac_sim_ai.egg-info/requires.txt
+writing top-level names to ../../build/isaac_sim_ai/isaac_sim_ai.egg-info/top_level.txt
+writing manifest file '../../build/isaac_sim_ai/isaac_sim_ai.egg-info/SOURCES.txt'
+reading manifest file '../../build/isaac_sim_ai/isaac_sim_ai.egg-info/SOURCES.txt'
+writing manifest file '../../build/isaac_sim_ai/isaac_sim_ai.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/kabilankb/isaacsim_ai/build/isaac_sim_ai/build
+creating /home/kabilankb/isaacsim_ai/build/isaac_sim_ai/build/lib
+creating /home/kabilankb/isaacsim_ai/build/isaac_sim_ai/build/lib/isaac_sim_ai
+copying isaac_sim_ai/__init__.py -> /home/kabilankb/isaacsim_ai/build/isaac_sim_ai/build/lib/isaac_sim_ai
+copying isaac_sim_ai/segmentation.py -> /home/kabilankb/isaacsim_ai/build/isaac_sim_ai/build/lib/isaac_sim_ai
+running install
+running install_lib
+creating /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/lib/python3.10/site-packages/isaac_sim_ai
+copying /home/kabilankb/isaacsim_ai/build/isaac_sim_ai/build/lib/isaac_sim_ai/__init__.py -> /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/lib/python3.10/site-packages/isaac_sim_ai
+copying /home/kabilankb/isaacsim_ai/build/isaac_sim_ai/build/lib/isaac_sim_ai/segmentation.py -> /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/lib/python3.10/site-packages/isaac_sim_ai
+byte-compiling /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/lib/python3.10/site-packages/isaac_sim_ai/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/lib/python3.10/site-packages/isaac_sim_ai/segmentation.py to segmentation.cpython-310.pyc
+running install_data
+creating /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/share/ament_index
+creating /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/share/ament_index/resource_index
+creating /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/share/ament_index/resource_index/packages
+copying resource/isaac_sim_ai -> /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/share/ament_index/resource_index/packages
+copying package.xml -> /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/share/isaac_sim_ai
+running install_egg_info
+Copying ../../build/isaac_sim_ai/isaac_sim_ai.egg-info to /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/lib/python3.10/site-packages/isaac_sim_ai-0.0.0-py3.10.egg-info
+running install_scripts
+Installing segmentation script to /home/kabilankb/isaacsim_ai/install/isaac_sim_ai/lib/isaac_sim_ai
+writing list of installed files to '/home/kabilankb/isaacsim_ai/build/isaac_sim_ai/install.log'
