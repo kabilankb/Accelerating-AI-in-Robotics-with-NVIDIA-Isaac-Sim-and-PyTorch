@@ -14,7 +14,7 @@ class MonoDepthNode(Node):
         super().__init__('mono_depth_node')
         self.subscription = self.create_subscription(
             Image,
-            '/jetson_webcam',  # Change this to your image topic
+            '/rgb',  # Change this to your image topic
             self.listener_callback,
             10)
         self.subscription  # prevent unused variable warning

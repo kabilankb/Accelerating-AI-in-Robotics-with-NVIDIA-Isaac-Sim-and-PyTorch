@@ -9,4 +9,5 @@ isaacsim_monodepth = isaac_sim_ai.isaacsim_monodepth:main
 isaacsim_objecct_detection = isaac_sim_ai.isaacsim_objecct_detection:main
 isaacsim_object_avoidance = isaac_sim_ai.isaacsim_object_avoidance:main
 segmentation = isaac_sim_ai.segmentation:main
+spot = isaac_sim_ai.spot:main
 

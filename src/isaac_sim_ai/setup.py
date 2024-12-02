@@ -26,10 +26,10 @@ setup(
                  'isaacsim_monodepth = isaac_sim_ai.isaacsim_monodepth:main',
                  'isaacsim_objecct_detection = isaac_sim_ai.isaacsim_objecct_detection:main',
                  'isaacsim_object_avoidance = isaac_sim_ai.isaacsim_object_avoidance:main',
-                 'isaacsim_jetbot_balltracking = isaac_sim_ai.isaacsim_jetbot_balltracking:main',
-                 'isaacsim_jetbot_linefollowing = isaac_sim_ai.isaacsim_jetbot_linefollowing:main',
-                 'isaacsim_kaya = isaac_sim_ai.isaacsim_kaya:main',
-                 'isaacsim_kaya_greencube = isaac_sim_ai.isaacsim_kaya_greencube:main',
+                
+                 
+                
+                 
         ],
     },
 )

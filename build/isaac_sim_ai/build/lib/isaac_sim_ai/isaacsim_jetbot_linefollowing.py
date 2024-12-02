@@ -2,112 +2,81 @@ import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Image
 from geometry_msgs.msg import Twist
-from std_msgs.msg import String
-from cv_bridge import CvBridge
 import cv2
+from cv_bridge import CvBridge
 import numpy as np
 
-class GreenBallTracker(Node):
+class HolonomicLineFollower(Node):
     def __init__(self):
-        super().__init__('green_ball_tracker')
+        super().__init__('kaya_line_follower')
+        self.bridge = CvBridge()
         
-        # Subscription to the camera topic
-        self.subscription = self.create_subscription(
+        # Subscribe to the camera feed
+        self.image_sub = self.create_subscription(
             Image,
-            '/rgb',  # Change this to your camera topic
-            self.listener_callback,
+            '/rgb',  # Update to your camera topic
+            self.image_callback,
             10)
         
-        # Publisher for velocity commands
-        self.cmd_vel_publisher = self.create_publisher(Twist, 'cmd_vel', 10)
+        # Publisher for holonomic velocity commands
+        self.cmd_vel_pub = self.create_publisher(Twist, '/cmd_vel', 10)
+
+    def image_callback(self, msg):
+        # Convert ROS image message to OpenCV image
+        frame = self.bridge.imgmsg_to_cv2(msg, 'bgr8')
         
-        # Publisher for ball coordinates
-        self.coordinates_publisher = self.create_publisher(String, 'ball_coordinates', 10)
+        # Convert image to HSV color space to detect yellow
+        hsv_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
         
-        # Publisher for processed image visualization
-        self.processed_image_publisher = self.create_publisher(Image, 'processed_image', 10)
+        # Define HSV range for yellow color (adjust as needed)
+        lower_yellow = np.array([20, 100, 100])
+        upper_yellow = np.array([30, 255, 255])
+        mask = cv2.inRange(hsv_frame, lower_yellow, upper_yellow)
         
-        # Bridge to convert ROS Image messages to OpenCV images
-        self.br = CvBridge()
-
-        # Parameters for control
-        self.k_p = 0.002  # Proportional control gain
-        self.linear_speed = 0.2
-        self.max_angular_speed = 1.0  # Maximum angular speed
-
-    def listener_callback(self, data):
-        self.get_logger().info('Receiving video frame')
-
-        # Convert ROS Image message to OpenCV image
-        current_frame = self.br.imgmsg_to_cv2(data)
-
-        # Convert the frame to HSV color space
-        hsv = cv2.cvtColor(current_frame, cv2.COLOR_BGR2HSV)
-
-        # Define the range for the color green in HSV
-        lower_green = np.array([35, 100, 100])
-        upper_green = np.array([85, 255, 255])
-
-        # Create a mask to detect green color
-        mask = cv2.inRange(hsv, lower_green, upper_green)
-
-        # Find contours in the mask
-        contours, _ = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
-
-        twist = Twist()
-
-        if contours:
-            # Find the largest contour
-            largest_contour = max(contours, key=cv2.contourArea)
-
-            # Get the coordinates of the bounding box
-            x, y, w, h = cv2.boundingRect(largest_contour)
-
-            # Calculate the center of the ball
-            ball_center_x = x + w // 2
-            ball_center_y = y + h // 2
-
-            # Publish the coordinates
-            coordinates = f'x: {ball_center_x}, y: {ball_center_y}'
-            self.coordinates_publisher.publish(String(data=coordinates))
-
-            # Draw the bounding box and center point on the image
-            cv2.rectangle(current_frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
-            cv2.circle(current_frame, (ball_center_x, ball_center_y), 5, (0, 0, 255), -1)
-
-            # Convert the image back to ROS message and publish it
-            processed_image_msg = self.br.cv2_to_imgmsg(current_frame, encoding='bgr8')
-            self.processed_image_publisher.publish(processed_image_msg)
-
-            # Control logic to follow the ball
-            frame_center_x = current_frame.shape[1] // 2
-            error_x = frame_center_x - ball_center_x
-
-            angular_speed = self.k_p * error_x
-            if abs(angular_speed) > self.max_angular_speed:
-                angular_speed = np.sign(angular_speed) * self.max_angular_speed
-
-            # Adjust linear and angular speeds based on error
-            if abs(error_x) < 50:  # Ball is roughly centered
-                twist.linear.x = self.linear_speed
-                twist.angular.z = 0.0
-            else:
-                twist.linear.x = 0.0
-                twist.angular.z = angular_speed
-
-            self.get_logger().info(f'Ball Coordinates: x={ball_center_x}, y={ball_center_y}, error_x={error_x}, angular_speed={angular_speed}')
+        # Calculate moments to find the center of the yellow area
+        moments = cv2.moments(mask)
+        
+        # If there is a yellow area detected in the frame
+        if moments['m00'] > 0:
+            # Calculate the centroid of the yellow line
+            cx = int(moments['m10'] / moments['m00'])
+            cy = int(moments['m01'] / moments['m00'])
+            
+            # Calculate error based on the center of the frame
+            frame_center_x = frame.shape[1] // 2
+            frame_center_y = frame.shape[0] // 2
+            error_x = cx - frame_center_x
+            error_y = cy - frame_center_y
+            
+            # Create a Twist message for holonomic control
+            twist = Twist()
+            
+            # Forward movement proportional to the y-position error
+            twist.linear.x = 0.2  # Constant speed forward
+            
+            # Sideways movement (holonomic control) to correct x error
+            twist.linear.y = -float(error_x) / 200  # Adjust based on error_x
+            
+            # Rotation to align with line direction
+            twist.angular.z = -float(error_x) / 300  # Adjust based on error_x
+            
+            self.cmd_vel_pub.publish(twist)
+            self.get_logger().info(f"Yellow line detected at x={cx}, y={cy}, adjusting with error_x={error_x}, error_y={error_y}")
+        
         else:
-            # Stop the robot if no ball is detected
+            # If no yellow line is detected, stop the robot
+            twist = Twist()
             twist.linear.x = 0.0
+            twist.linear.y = 0.0
             twist.angular.z = 0.0
-
-        self.cmd_vel_publisher.publish(twist)
+            self.cmd_vel_pub.publish(twist)
+            self.get_logger().info("Yellow line not detected, stopping.")
 
 def main(args=None):
     rclpy.init(args=args)
-    green_ball_tracker = GreenBallTracker()
-    rclpy.spin(green_ball_tracker)
-    green_ball_tracker.destroy_node()
+    line_follower = HolonomicLineFollower()
+    rclpy.spin(line_follower)
+    line_follower.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':

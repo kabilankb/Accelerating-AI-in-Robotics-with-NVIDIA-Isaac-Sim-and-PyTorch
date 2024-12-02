@@ -19,6 +19,7 @@ isaac_sim_ai/isaacsim_monodepth.py
 isaac_sim_ai/isaacsim_objecct_detection.py
 isaac_sim_ai/isaacsim_object_avoidance.py
 isaac_sim_ai/segmentation.py
+isaac_sim_ai/spot.py
 resource/isaac_sim_ai
 test/test_copyright.py
 test/test_flake8.py
