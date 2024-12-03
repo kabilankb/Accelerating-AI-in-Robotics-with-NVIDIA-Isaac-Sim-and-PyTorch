@@ -21,6 +21,7 @@ This repository showcases how to leverage NVIDIA Isaac Sim and PyTorch to accele
 ## **Introduction**
 
 Artificial Intelligence (AI) and robotics are converging rapidly, revolutionizing industries such as manufacturing, logistics, and healthcare. NVIDIA Isaac Sim, in combination with PyTorch, provides a powerful framework for developing and testing robotic applications with advanced AI capabilities in realistic simulated environments.
+![image](https://github.com/user-attachments/assets/a1dccdc7-a3b6-4ea8-b30b-bf2aeaafccbd)
 
 ---
 
