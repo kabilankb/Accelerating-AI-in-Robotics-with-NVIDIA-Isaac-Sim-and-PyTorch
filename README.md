@@ -39,6 +39,7 @@ Integrating NVIDIA Isaac Sim with PyTorch and ROS2 offers:
 
 ### **Object Detection in ROS2 with PyTorch’s Faster R-CNN**
 Detecting objects is fundamental for enabling robots to perceive and interact with their surroundings.
+![image](https://github.com/user-attachments/assets/1a8abe6f-2a83-4860-a5f9-f82ec88d232a)
 
 **Steps**:
 1. Set up NVIDIA Isaac Sim to simulate the robot and environment.
@@ -51,6 +52,7 @@ Detecting objects is fundamental for enabling robots to perceive and interact wi
 
 ### **Human Pose Estimation with PyTorch and ROS2**
 Accurate human pose estimation is essential for applications like human-robot interaction and healthcare.
+![image](https://github.com/user-attachments/assets/79a0f37c-5db6-41ef-b386-4d58d89ea9e4)
 
 **Steps**:
 1. Configure Isaac Sim to simulate human models and environments.
@@ -63,6 +65,7 @@ Accurate human pose estimation is essential for applications like human-robot in
 
 ### **Monocular Depth Estimation Using PyTorch**
 Depth estimation is crucial for enhancing spatial awareness in navigation and interaction tasks.
+![image](https://github.com/user-attachments/assets/86967f3d-a858-4614-a71c-d3f3ba1bb59c)
 
 **Steps**:
 1. Set up Isaac Sim to generate RGB-D data.
@@ -75,6 +78,7 @@ Depth estimation is crucial for enhancing spatial awareness in navigation and in
 
 ### **Semantic Segmentation in ROS2**
 Semantic segmentation enables robots to understand scenes and manipulate objects effectively.
+![image](https://github.com/user-attachments/assets/899c5d7d-18b6-453b-a507-70d14e1cda51)
 
 **Steps**:
 1. Use NVIDIA Nova Carter robot capabilities for image segmentation tasks.
