@@ -44,6 +44,4 @@ This ROS2 package performs human pose estimation using a Keypoint R-CNN model. T
 ## Robot Behavior
 - The robot identifies the closest human and adjusts its linear and angular velocities to follow.
 
-## License
-This project is licensed under the MIT License.
 
